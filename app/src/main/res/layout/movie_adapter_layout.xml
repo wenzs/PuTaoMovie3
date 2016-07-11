@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fdfdfd"
+    android:paddingTop="10dp">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/logo_iv"
+        android:layout_width="75dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/movie_gcedition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/logo_iv"
+        android:layout_alignTop="@+id/logo_iv"
+        android:textColor="#00ff3c"/>
+
+
+    <TextView
+        android:id="@+id/moviename_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo_iv"
+        android:layout_centerHorizontal="true"
+        android:singleLine="true"
+        android:text="忍者神龟" />
+
+    <RelativeLayout
+        android:id="@+id/mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/moviename_tv"
+        android:layout_centerHorizontal="true">
+
+        <RatingBar
+            android:id="@+id/star"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:rating="2"
+            android:stepSize="0.5" />
+
+        <TextView
+            android:id="@+id/moviemark_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/star"
+            android:text="8分" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/moviesell_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mark"
+        android:layout_centerHorizontal="true"
+
+        android:text="销售" />
+
+</RelativeLayout>
